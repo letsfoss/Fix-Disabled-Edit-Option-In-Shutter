@@ -1,4 +1,4 @@
-# Fix-Disabled-Edit-Option-In-Shutter
+# Fix Disabled Edit Option in Shutter
 Shell script to fix disabled edit button in Shutter
 
 - Open your terminal and Run the Below Command
