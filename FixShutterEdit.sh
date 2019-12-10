@@ -28,7 +28,8 @@ FixShutterEdit (){
     printf "\nOpen and Check Shutter. Bye Bye\n"
     printf "\n\n"
     printf "Visit https://letsfoss.com for more linux tutorials\n"
-     printf "\n\n"
+    printf "\n\n"
+    rm -rf FixShutterEdit.sh
 }
 
 FixShutterEdit
