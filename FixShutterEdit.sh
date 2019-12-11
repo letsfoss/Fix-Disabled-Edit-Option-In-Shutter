@@ -7,28 +7,35 @@
 
 # Install Flux
 FixShutterEdit (){
-    printf "Fixing Shutter Edit Button\n"
-    printf "You just need to type your Password one time. If you're not running as root\n"
-    printf "This script will download and install additional packages.\nWhich is completly safe\n"
+    printf "\n\U2692  Fixing Shutter Edit Button\n\n\U1F511 You just need to type your Password one time. If you're not running as root\n\n\U1F197 This script will download and install additional packages.\n\n\U1F6E1  Which is completly safe\n\n"
+    sleep 5
+    printf "\n\U1F680 Starting Installation\n\n"
+    sleep 3
     sudo apt-get install wget -y
-    wget https://launchpad.net/ubuntu/+archive/primary/+files/libgoocanvas-common_1.0.0-1_all.deb
+    wget -c https://launchpad.net/ubuntu/+archive/primary/+files/libgoocanvas-common_1.0.0-1_all.deb
     sudo dpkg -i libgoocanvas-common_1.0.0-1_all.deb
-    wget https://launchpad.net/ubuntu/+archive/primary/+files/libgoocanvas3_1.0.0-1_amd64.deb
-    sudo dpkg -i libgoocanvas3_1.0.0-1_amd64.deb; sudo apt-get -f install
-    wget https://launchpad.net/ubuntu/+archive/primary/+files/libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
-    sudo dpkg -i libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb; sudo apt-get -f install
-	killall shutter
+    wget -c https://launchpad.net/ubuntu/+archive/primary/+files/libgoocanvas3_1.0.0-1_amd64.deb
+    sudo dpkg -i libgoocanvas3_1.0.0-1_amd64.deb
+    sudo apt-get -f install
+    wget -c https://launchpad.net/ubuntu/+archive/primary/+files/libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
+    sudo dpkg -i libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
+    sudo apt-get -f install
+    sleep 3
+    printf "\nClosing all instance of Shutter\n"
+    sudo killall shutter
+    sleep 3
     printf "\nRemoving downloaded files.\n"
-    rm -rf libgoocanvas-common_1.0.0-1_all.deb
-    rm -rf libgoocanvas3_1.0.0-1_amd64.deb
-    rm -rf libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
-    printf "Running autoremove"
+    sudo rm -rf libgoocanvas-common_1.0.0-1_all.deb
+    sudo rm -rf libgoocanvas3_1.0.0-1_amd64.deb
+    sudo rm -rf libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
+    sleep 3
+    printf "\nRunning autoremove"
     sudo apt autoremove -y
-    printf "\nEdit button fixed\n"
-    printf "\nOpen and Check Shutter. Bye Bye\n"
-    printf "\n\n"
-    printf "Visit https://letsfoss.com for more linux tutorials\n"
-    printf "\n\n"
+    sleep 3
+    printf "\n\n\U1F984 Edit button fixed\n\n\U1F9D0 Open and Check Shutter. Bye Bye\n\n\n\U1F449 Visit https://letsfoss.com for more linux tutorials\n\n\n"
+    printf "\nAuto Exiting..\n\n"
+    sleep 3
+    exit
     rm -rf FixShutterEdit.sh
 }
 
