@@ -34,9 +34,9 @@ FixShutterEdit (){
     sleep 3
     printf "\n\n\U1F984 Edit button fixed\n\n\U1F9D0 Open and Check Shutter. Bye Bye\n\n\n\U1F449 Visit https://letsfoss.com for more linux tutorials\n\n\n"
     printf "\nAuto Exiting..\n\n"
+    rm -rf FixShutterEdit.sh
     sleep 3
     exit
-    rm -rf FixShutterEdit.sh
 }
 
 FixShutterEdit
